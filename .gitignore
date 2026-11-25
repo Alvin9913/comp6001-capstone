@@ -1,0 +1,13 @@
+﻿data/
+outputs/checkpoints/
+outputs/logs/
+*.pt
+*.pth
+*.npy
+*.npz
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+*.log
+.env

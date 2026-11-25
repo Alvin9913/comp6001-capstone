@@ -1,0 +1,212 @@
+{
+  "splits": {
+    "train": 19816,
+    "validation": 2410,
+    "test": 2409
+  },
+  "class_counts": {
+    "train": {
+      "non-sarcastic": 11174,
+      "sarcastic": 8642
+    },
+    "validation": {
+      "non-sarcastic": 1451,
+      "sarcastic": 959
+    },
+    "test": {
+      "non-sarcastic": 1450,
+      "sarcastic": 959
+    }
+  },
+  "fig01": {
+    "path": "fig01_split_class_balance.png",
+    "counts": [
+      [
+        11174,
+        8642
+      ],
+      [
+        1451,
+        959
+      ],
+      [
+        1450,
+        959
+      ]
+    ],
+    "ratios": [
+      0.43611223253936215,
+      0.3979253112033195,
+      0.39809049398090496
+    ]
+  },
+  "fig02": {
+    "path": "fig02_text_length.png",
+    "mean_by_class": {
+      "0": 76.077501342402,
+      "1": 85.64672529507058
+    },
+    "p95": 144.0,
+    "max": 665,
+    "truncated_frac": 1.0
+  },
+  "fig03": {
+    "path": "fig03_image_geometry.png",
+    "w_mean": 445.8550436371017,
+    "h_mean": 425.08686827684187,
+    "w_min": 45,
+    "w_max": 512,
+    "aspect_median": 1.0,
+    "square_frac": 0.17381773898924294,
+    "kb_mean": 48.260206832250866
+  },
+  "fig04": {
+    "brightness_class0": 121.2673995026643,
+    "brightness_class1": 139.32460719696968,
+    "contrast_class0": 61.37993719360568,
+    "contrast_class1": 59.85024204545454,
+    "colorfulness_class0": 41.29372071047957,
+    "colorfulness_class1": 39.03183806818181,
+    "path": "fig04_image_appearance.png"
+  },
+  "fig05": {
+    "path": "fig05_examples.png"
+  },
+  "fig06": {
+    "top_sarcastic": [
+      [
+        "user",
+        2978
+      ],
+      [
+        "emoji",
+        2935
+      ],
+      [
+        "funny",
+        590
+      ],
+      [
+        "num",
+        461
+      ],
+      [
+        "lol",
+        426
+      ],
+      [
+        "love",
+        348
+      ],
+      [
+        "great",
+        323
+      ],
+      [
+        "thanks",
+        303
+      ],
+      [
+        "fun",
+        273
+      ],
+      [
+        "day",
+        267
+      ],
+      [
+        "don",
+        261
+      ],
+      [
+        "good",
+        246
+      ],
+      [
+        "know",
+        242
+      ],
+      [
+        "life",
+        228
+      ],
+      [
+        "now",
+        224
+      ]
+    ],
+    "top_non-sarcastic": [
+      [
+        "emoji",
+        5191
+      ],
+      [
+        "user",
+        3913
+      ],
+      [
+        "today",
+        452
+      ],
+      [
+        "love",
+        405
+      ],
+      [
+        "new",
+        344
+      ],
+      [
+        "day",
+        310
+      ],
+      [
+        "time",
+        300
+      ],
+      [
+        "now",
+        299
+      ],
+      [
+        "here",
+        298
+      ],
+      [
+        "trump",
+        252
+      ],
+      [
+        "first",
+        249
+      ],
+      [
+        "tonight",
+        240
+      ],
+      [
+        "see",
+        237
+      ],
+      [
+        "good",
+        236
+      ],
+      [
+        "people",
+        225
+      ]
+    ],
+    "path": "fig06_top_terms.png"
+  },
+  "fig07": {
+    "path": "fig07_length_vs_label.png",
+    "rate_by_bin": {
+      "<40": 0.2952586206896552,
+      "40-80": 0.4482420278004906,
+      "80-120": 0.5423056106801372,
+      "120-160": 0.4020618556701031,
+      ">160": 0.6095890410958904
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "models": {
+    "text_only": {
+      "final": {
+        "accuracy": 0.7920298879202988,
+        "precision": 0.7313131313131314,
+        "recall": 0.7549530761209593,
+        "f1_binary": 0.7429451000513083,
+        "f1_macro": 0.7841598975334967,
+        "roc_auc": 0.8625533062457302
+      },
+      "fold_mean_macro_f1": 0.7841153458061362,
+      "fold_std_macro_f1": 0.001642097914443274,
+      "n_params": 197121
+    },
+    "vision_only": {
+      "final": {
+        "accuracy": 0.7193856371938564,
+        "precision": 0.6343779677113011,
+        "recall": 0.6965589155370178,
+        "f1_binary": 0.6640159045725647,
+        "f1_macro": 0.7115517869263394,
+        "roc_auc": 0.7848527561037
+      },
+      "fold_mean_macro_f1": 0.7092586408924011,
+      "fold_std_macro_f1": 0.003682524360554213,
+      "n_params": 524801
+    },
+    "early_fusion": {
+      "final": {
+        "accuracy": 0.8115400581154005,
+        "precision": 0.7487684729064039,
+        "recall": 0.7924921793534933,
+        "f1_binary": 0.7700101317122594,
+        "f1_macro": 0.8051879069250467,
+        "roc_auc": 0.8801136241055697
+      },
+      "fold_mean_macro_f1": 0.7948846699841905,
+      "fold_std_macro_f1": 0.0030461938374749505,
+      "n_params": 721409
+    },
+    "late_fusion": {
+      "final": {
+        "accuracy": 0.8015774180157742,
+        "precision": 0.745158002038736,
+        "recall": 0.762252346193952,
+        "f1_binary": 0.7536082474226804,
+        "f1_macro": 0.7937603433082825,
+        "roc_auc": 0.8741440437237065
+      },
+      "fold_mean_macro_f1": 0.7946421892404839,
+      "fold_std_macro_f1": 0.002913174137482202,
+      "n_params": null
+    },
+    "cmgan_nocross": {
+      "final": {
+        "accuracy": 0.8252386882523869,
+        "precision": 0.7673956262425448,
+        "recall": 0.8050052137643379,
+        "f1_binary": 0.7857506361323155,
+        "f1_macro": 0.8190933341895367,
+        "roc_auc": 0.8946575096184962
+      },
+      "fold_mean_macro_f1": 0.8121141032632021,
+      "fold_std_macro_f1": 0.005297825412523565,
+      "n_params": 2104065
+    },
+    "cmgan_nogate": {
+      "final": {
+        "accuracy": 0.8289746782897468,
+        "precision": 0.7726819541375872,
+        "recall": 0.808133472367049,
+        "f1_binary": 0.7900101936799184,
+        "f1_macro": 0.822876245299343,
+        "roc_auc": 0.8981906439897882
+      },
+      "fold_mean_macro_f1": 0.8107073593752661,
+      "fold_std_macro_f1": 0.0036146372836027177,
+      "n_params": 2038529
+    },
+    "cmgan": {
+      "final": {
+        "accuracy": 0.8289746782897468,
+        "precision": 0.7743229689067201,
+        "recall": 0.8050052137643379,
+        "f1_binary": 0.7893660531697342,
+        "f1_macro": 0.8227053885694933,
+        "roc_auc": 0.9004329222250188
+      },
+      "fold_mean_macro_f1": 0.8172661249707561,
+      "fold_std_macro_f1": 0.0037540359602641796,
+      "n_params": 2104065
+    }
+  },
+  "paired_tests_vs_cmgan": [
+    {
+      "comparison": "CM-GAN vs BERT text-only",
+      "mean_macro_f1_diff": 0.03315077916461997,
+      "std_diff": 0.0050006194273628955,
+      "t_stat": 14.823642709852335,
+      "t_p": 0.00012057827986718285,
+      "wilcoxon_p": 0.0625,
+      "cohens_d": 6.629334554679803,
+      "significant_0.05": true
+    },
+    {
+      "comparison": "CM-GAN vs ResNet-50 vision-only",
+      "mean_macro_f1_diff": 0.108007484078355,
+      "std_diff": 0.0023029764172229085,
+      "t_stat": 104.8695395540178,
+      "t_p": 4.95781806774447e-08,
+      "wilcoxon_p": 0.0625,
+      "cohens_d": 46.89908384237736,
+      "significant_0.05": true
+    },
+    {
+      "comparison": "CM-GAN vs Early fusion (concat)",
+      "mean_macro_f1_diff": 0.02238145498656565,
+      "std_diff": 0.00619851424560135,
+      "t_stat": 8.073943658486693,
+      "t_p": 0.0012783504796851797,
+      "wilcoxon_p": 0.0625,
+      "cohens_d": 3.610777373375918,
+      "significant_0.05": true
+    },
+    {
+      "comparison": "CM-GAN vs Late fusion (decision)",
+      "mean_macro_f1_diff": 0.022623935730272306,
+      "std_diff": 0.005768890345052366,
+      "t_stat": 8.769218200665248,
+      "t_p": 0.0009323197163341108,
+      "wilcoxon_p": 0.0625,
+      "cohens_d": 3.921713601243177,
+      "significant_0.05": true
+    },
+    {
+      "comparison": "CM-GAN vs CM-GAN w/o cross-attn",
+      "mean_macro_f1_diff": 0.005152021707553955,
+      "std_diff": 0.005948403413738597,
+      "t_stat": 1.9366996416278106,
+      "t_p": 0.12484997891537986,
+      "wilcoxon_p": 0.125,
+      "cohens_d": 0.8661184101358532,
+      "significant_0.05": false
+    },
+    {
+      "comparison": "CM-GAN vs CM-GAN w/o gate",
+      "mean_macro_f1_diff": 0.0065587655954899345,
+      "std_diff": 0.005857657261965611,
+      "t_stat": 2.5037049905991036,
+      "t_p": 0.06650278535981968,
+      "wilcoxon_p": 0.0625,
+      "cohens_d": 1.1196909109170134,
+      "significant_0.05": false
+    }
+  ],
+  "incongruity": {
+    "delta_mean_sarcastic": 9.00355052947998,
+    "delta_mean_non_sarcastic": 9.717900276184082,
+    "welch_t": -10.581151962280273,
+    "welch_p": 1.404203719210577e-25,
+    "corr_delta_correct": 0.2106793211310099
+  },
+  "figures": {
+    "fig10": "fig10_metric_bars.png",
+    "fig11": "fig11_confusion_matrices.png",
+    "fig12": "fig12_roc.png",
+    "fig13": "",
+    "fig14": "fig14_ablation.png",
+    "fig15": "fig15_incongruity_magnitude.png",
+    "fig16": "fig16_attention_maps.png"
+  }
+}
