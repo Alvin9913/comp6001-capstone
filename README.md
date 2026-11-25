@@ -215,3 +215,7 @@ figures: `outputs/figures/`.
   ACL 2019, 4619–4629.
 * Pan, H. et al. (2020). Modeling intra and inter-modality incongruity for multi-modal sarcasm
   detection. Findings of EMNLP 2020, 1383–1392.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
